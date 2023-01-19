@@ -3,8 +3,11 @@ public:
     string gcdOfStrings(string str1, string str2) {
         int ori_1 = str1.length();
         int ori_2 = str2.length();
+        cout<<ori_1<<endl;
         int len_1 = str1.length();
         int len_2 = str2.length();
+        int n1 = findFactor(len_1);
+        int n2 = findFactor(len_2);
         string ans;
         if(len_1<len_2){
             int cnt = 0;
@@ -60,5 +63,14 @@ public:
             }
         }
         return ans;
+    }
+    int findFactor(int n){
+        for(int i=2;i<=n;i++){
+            if(n%i==0){
+                return i;
+            }
+        }
+        
+        return 1;
     }
 };
