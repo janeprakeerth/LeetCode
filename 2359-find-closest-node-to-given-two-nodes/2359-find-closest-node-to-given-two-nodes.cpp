@@ -48,7 +48,13 @@ public:
         int ans = INT_MIN;
         dist1[node1] = 0;
         dist2[node2] = 0;
-        
+        // for(int i=0;i<edges.size();i++){
+        //     cout<<dist1[i]<<" ";
+        // }
+        // cout<<endl;
+        // for(int i=0;i<edges.size();i++){
+        //     cout<<dist2[i]<<" ";
+        // }
         for(int i=0;i<edges.size();i++){
             if(dist1[i]!=-1 && dist2[i]!=-1){
                 int x = max(dist1[i],dist2[i]);
